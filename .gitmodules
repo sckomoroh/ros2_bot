@@ -4,3 +4,6 @@
 [submodule "src/mpu6050_driver"]
 	path = src/mpu6050_driver
 	url = git@github.com:hiwad-aziz/ros2_mpu6050_driver.git
+[submodule "src/lidar_ld19"]
+	path = src/lidar_ld19
+	url = git@github.com:ldrobotSensorTeam/ldlidar_stl_ros2.git
