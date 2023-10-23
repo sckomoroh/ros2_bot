@@ -15,7 +15,7 @@
 	url = git@github.com:sckomoroh/ros2_bot_motor_hw.git
 [submodule "src/mpu6050_driver"]
 	path = src/mpu6050_driver
-	url = git@github.com:sckomoroh/ros2_mpu6050_driver.git
+	ulr = git@github.com:sckomoroh/ros2_bot_mpu6050_driver.git
 [submodule "src/navigation"]
 	path = src/navigation
 	url = git@github.com:sckomoroh/ros2_bot_navigation.git
