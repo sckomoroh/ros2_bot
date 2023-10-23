@@ -1,0 +1,6 @@
+[submodule "tools/monitor"]
+	path = tools/monitor
+	url = https://github.com/sckomoroh/ros2_topic_monitor.git
+[submodule "src/mpu6050_driver"]
+	path = src/mpu6050_driver
+	url = git@github.com:hiwad-aziz/ros2_mpu6050_driver.git
