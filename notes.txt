@@ -1,0 +1,74 @@
+ros2 pkg create --build-type ament_python <PACKAGE_NAME>
+
+pip3 install RPi.GPIO
+
+scp navigation/maps/field.pgm dev@192.168.0.100:/home/dev/package/navigation/share/navigation/maps
+Vmax = 1.2 m/s
+R = 38 mm = 0.038m
+Wmax = 1.2/0.038 ~ 31.58 rad/s
+
+docker container start ros5_build
+docker exec -it ros5_build /bin/bash
+
+sudo apt install -y ros-humble-joint-state-publisher ros-humble-xacro
+sudo apt install -y ros-humble-nav2-core
+sudo apt install -y ros-humble-nav2-bringup ros-humble-robot-localization ros-humble-controller-manager 
+sudo apt install -y libserial1 ros-humble-joint-state-publisher ros-humble-diff-drive-controller ros-humble-imu-filter-madgwick
+apt search json11
+pip install mpu6050-raspberrypi 
+pip3 install smbus 
+
+
+sudo apt install ros-humble-hardware-interface
+sudo apt install -y libserial-dev
+sudo apt install -y libjson11-1-dev
+sudo apt install -y libi2c-dev
+sudo apt install -y libwiringpi-dev
+
+
+sudo usermod -a -G dialout $USER
+sudo chmod a+rw /dev/serial0
+
+ros2 lifecycle set <nodename> shutdown
+
+docker run 
+docker container start ros5_build
+docker exec -it ros5_build /bin/bash
+
+
+docker run -it -v /home/yzvihunov/Documents/ROS/:/home/yzvihunov/ROS/ --platform linux/arm64 --name ros_build_arm64 humble_ros:robot
+
+colcon build --packages-select bringup  fake_scan_node imu_node imu_to_odom_node motor_hw navigation rangefinder_node remap_node robot_description
+
+esptool.py --port /dev/ttyUSB0 run && ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB0
+esptool.py --port /dev/ttyUSB1 run && ros2 run micro_ros_agent micro_ros_agent serial --dev /dev/ttyUSB1
+
+
+idVendor=10c4, idProduct=ea60
+
+docker container start micro_ros_arm64
+docker exec -it micro_ros_arm64 /bin/bash
+
+scp -r install/mpu6050driver/* dev@192.168.0.105:/home/dev/package/mpu6050driver
+scp -r install/motor_hw/* dev@192.168.0.105:/home/dev/package/motor_hw
+
+ros2 launch bringup motor.py
+ros2 launch mpu6050driver mpu6050driver_launch.py
+ros2 launch ldlidar_stl_ros2 ld19.launch.py
+
+rm fr* && ros2 run tf2_tools view_frames -o frames
+
+board build
+colcon build --packages-select \
+    bringup \
+    ldlidar_stl_ros2 \
+    motor_hw \
+    mpu6050driver \
+    description 
+
+host build
+colcon build --packages-select \
+    bringup \
+    description \
+    navigation \
+    remap_node 
