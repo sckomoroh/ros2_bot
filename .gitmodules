@@ -30,7 +30,11 @@
 	path = src/remap_node
 	url = git@github.com:sckomoroh/ros2_bot_remap_node.git
 	branch=develop
-[submodule "/home/yzvihunov/Documents/ROS/src/rviz2_plugins/rviz_reconfigure_plugin"]
-	path = /home/yzvihunov/Documents/ROS/src/rviz2_plugins/rviz_reconfigure_plugin
+[submodule "src/rviz2_plugins/rviz_reconfigure_plugin"]
+	path = src/rviz2_plugins/rviz_reconfigure_plugin
 	url = git@github.com:sckomoroh/ros2_bot_rviz2_reconfigure_plugin.git
 	branch = develop
+[submodule "src/rviz2_plugins/monitor_rviz2_plugin"]
+	path = src/rviz2_plugins/monitor_rviz2_plugin
+	url = git@github.com:sckomoroh/ros2_bot_rviz2_monitor_plugin.git
+	branch = develop	
