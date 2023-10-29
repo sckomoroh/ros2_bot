@@ -72,3 +72,7 @@ colcon build --packages-select \
     description \
     navigation \
     remap_node 
+
+
+ros2 action send_goal /spin nav2_msgs/action/Spin "{target_yaw: -0.7}" --feedback
+ros2 action send_goal /backup nav2_msgs/action/BackUp "{target: {x: 0.1, y: 0.0, z: 0.0}, speed: -0.1}" --feedback

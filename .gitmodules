@@ -1,6 +1,6 @@
 [submodule "tools/monitor"]
 	path = tools/monitor
-	url = https://github.com/sckomoroh/ros2_topic_monitor.git
+	url = git@github.com:sckomoroh/ros2_topic_monitor.git
 	branch=develop
 [submodule "src/bringup"]
 	path = src/bringup
