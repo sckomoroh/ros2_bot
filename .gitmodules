@@ -1,24 +1,36 @@
 [submodule "tools/monitor"]
 	path = tools/monitor
 	url = https://github.com/sckomoroh/ros2_topic_monitor.git
+	branch=develop
 [submodule "src/bringup"]
 	path = src/bringup
 	url = git@github.com:sckomoroh/ros2_bot_bringup.git
+	branch = develop
 [submodule "src/description"]
 	path = src/description
 	url = git@github.com:sckomoroh/ros2_bot-description.git
+	branch = develop
 [submodule "src/lidar_ld19"]
 	path = src/lidar_ld19
 	url = git@github.com:sckomoroh/ros2_bot_ldlidar_stl_ros2.git
+	branch = develop
 [submodule "src/motor_hw"]
 	path = src/motor_hw
 	url = git@github.com:sckomoroh/ros2_bot_motor_hw.git
+	branch = develop
 [submodule "src/mpu6050_driver"]
 	path = src/mpu6050_driver
 	url = git@github.com:sckomoroh/ros2_bot_mpu6050_driver.git
+	branch = develop
 [submodule "src/navigation"]
 	path = src/navigation
 	url = git@github.com:sckomoroh/ros2_bot_navigation.git
+	branch=develop
 [submodule "src/remap_node"]
 	path = src/remap_node
 	url = git@github.com:sckomoroh/ros2_bot_remap_node.git
+	branch=develop
+[submodule "/home/yzvihunov/Documents/ROS/src/rviz2_plugins/rviz_reconfigure_plugin"]
+	path = /home/yzvihunov/Documents/ROS/src/rviz2_plugins/rviz_reconfigure_plugin
+	url = git@github.com:sckomoroh/ros2_bot_rviz2_reconfigure_plugin.git
+	branch = develop
