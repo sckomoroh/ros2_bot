@@ -15,17 +15,17 @@ sudo apt install -y ros-humble-nav2-core
 sudo apt install -y ros-humble-nav2-bringup ros-humble-robot-localization ros-humble-controller-manager 
 sudo apt install -y libserial1 ros-humble-joint-state-publisher ros-humble-diff-drive-controller ros-humble-imu-filter-madgwick
 sudo apt install -y libfreeimage-dev
+sudo apt install ros-humble-hardware-interface
+sudo apt install -y libserial-dev
+sudo apt install -y libjson11-1-dev
+sudo apt install -y libi2c-dev
+sudo apt install -y libwiringpi-dev
 
 apt search json11
 pip install mpu6050-raspberrypi 
 pip3 install smbus 
 
 
-sudo apt install ros-humble-hardware-interface
-sudo apt install -y libserial-dev
-sudo apt install -y libjson11-1-dev
-sudo apt install -y libi2c-dev
-sudo apt install -y libwiringpi-dev
 
 
 sudo usermod -a -G dialout $USER
@@ -83,3 +83,17 @@ Reconnect to WiFi
 sudo netplan generate
 sudo netplan apply
 
+<<<<<<< HEAD
+=======
+Git suggestions:
+Remove:
+git submodule deinit -f path/to/submodule
+git rm --cached path/to/submodule
+rm -rf .git/modules/path/to/submodule
+git commit -m "Removed submodule"
+rm -rf path/to/submodule
+
+
+git submodule update --init --recursive
+
+>>>>>>> 332a7c5 (Refactoring)

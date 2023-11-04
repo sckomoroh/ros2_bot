@@ -10,18 +10,6 @@
 	path = src/description
 	url = git@github.com:sckomoroh/ros2_bot-description.git
 	branch = develop
-[submodule "src/lidar_ld19"]
-	path = src/lidar_ld19
-	url = git@github.com:sckomoroh/ros2_bot_ldlidar_stl_ros2.git
-	branch = develop
-[submodule "src/motor_hw"]
-	path = src/motor_hw
-	url = git@github.com:sckomoroh/ros2_bot_motor_hw.git
-	branch = develop
-[submodule "src/mpu6050_driver"]
-	path = src/mpu6050_driver
-	url = git@github.com:sckomoroh/ros2_bot_mpu6050_driver.git
-	branch = develop
 [submodule "src/navigation"]
 	path = src/navigation
 	url = git@github.com:sckomoroh/ros2_bot_navigation.git

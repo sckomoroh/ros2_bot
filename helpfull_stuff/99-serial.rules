@@ -1,0 +1,2 @@
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="5ef789d4ff95eb119f534c513d98b6d1", MODE="0666", SYMLINK+="ldlidar"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="10c4", ATTRS{idProduct}=="ea60", ATTRS{serial}=="2249e60f2a96eb11a1af43513d98b6d1", MODE="0666", SYMLINK+="esp32"
