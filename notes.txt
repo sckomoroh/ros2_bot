@@ -83,8 +83,7 @@ Reconnect to WiFi
 sudo netplan generate
 sudo netplan apply
 
-<<<<<<< HEAD
-=======
+
 Git suggestions:
 Remove:
 git submodule deinit -f path/to/submodule
@@ -96,4 +95,5 @@ rm -rf path/to/submodule
 
 git submodule update --init --recursive
 
->>>>>>> 332a7c5 (Refactoring)
+For satellite RVIZ2 plugin:
+http://tile.openstreetmap.org/{z}/{x}/{y}.png
