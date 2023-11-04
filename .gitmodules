@@ -34,3 +34,11 @@
 	path = src/hardware_drivers/mpu_driver_node
 	url = git@github.com:sckomoroh/ros2_bot_mpu6050_driver.git
 	branch = develop	
+[submodule "src/rviz2_plugins/rviz_satellite"]
+	path = src/rviz2_plugins/rviz_satellite
+	url = git@github.com:nobleo/rviz_satellite.git
+	branch = ros2
+[submodule "src/hardware_drivers/gps_driver_node"]
+	path = src/hardware_drivers/gps_driver_node
+	url = git@github.com:sckomoroh/ros2_bot_gps_node.git
+	branch = develop
