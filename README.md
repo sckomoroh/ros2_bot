@@ -16,27 +16,18 @@ left_encoder_direction and right_encoder_direction responsible for the encoder d
 
 
 Repository content:
-
 bringup - contains the launch files to launch the appropriate nodes
-
 description - contains the robot model URDF description
-
 navigation - contains the configuration parameters for the localization stack
-
 hardware_drivers/gps_driver_node - GPS driver node
-
 hardware_drivers/lidar_driver_node - LD19 lidar driver node
-
 hardware_drivers/motors_driver_node - DiffDrive driver node
-
 hardware_drivers/mpu_driver_node - MPU6050 driver node
-
 rviz2_plugins/monitor_rviz2_plugin - RVIZ2 plugin for velocity monitoring
-
 rviz2_plugins/rviz_reconfigure_plugin - RVIZ2 plugin for real-time reconfiguring nodes parameters
-
 rviz2_plugins/rviz_satellite - RVIZ2 plugin to visualize map in case if using the GPS functionality
-
 tools/monitor - GUI based tool to monitor the topics values in real-time
+
+NOTE: all entry in the repository this is the sepatare git module
 
 
