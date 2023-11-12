@@ -38,7 +38,7 @@ docker container start ros5_build
 docker exec -it ros5_build /bin/bash
 
 
-docker run -it -v /home/yzvihunov/Documents/ROS/:/home/yzvihunov/ROS/ --platform linux/arm64 --name ros_build_arm64 humble_ros:robot
+docker run -it -v /home/yzvihunov/Documents/ROS/:/home/yzvihunov/ROS/ --platform linux/arm64 --name ros_fb humble_ros:robot
 
 colcon build --packages-select bringup  fake_scan_node imu_node imu_to_odom_node motor_hw navigation rangefinder_node remap_node robot_description
 
@@ -58,7 +58,7 @@ ros2 launch bringup motor.py
 ros2 launch mpu6050driver mpu6050driver_launch.py
 ros2 launch ldlidar_stl_ros2 ld19.launch.py
 
-rm fr* && ros2 run tf2_tools view_frames -o frames
+ros2 run tf2_tools view_frames -o frames && evince frames.pdf
 
 board build
 colcon build --packages-select \
